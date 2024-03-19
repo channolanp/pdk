@@ -93,14 +93,14 @@ class DogCatModel(PyTorchTrial):
 
     def build_training_data_loader(self) -> DataLoader:
         return DataLoader(
-            self.train_ds, batch_size=self.context.get_per_slot_batch_size()
+            self.train_ds, batch_size=self.context.get_per_slot_batch_size(), pin_memory=True, num_workers=16
         )
 
     # -------------------------------------------------------------------------
 
     def build_validation_data_loader(self) -> DataLoader:
         return DataLoader(
-            self.val_ds, batch_size=self.context.get_per_slot_batch_size()
+            self.val_ds, batch_size=self.context.get_per_slot_batch_size(), pin_memory=True, num_workers=16
         )
 
     # -------------------------------------------------------------------------
