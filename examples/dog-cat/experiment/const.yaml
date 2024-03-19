@@ -1,6 +1,6 @@
 name: Pipeline-Run-DogCat-1GPU
-workspace: PDK Demos
-project: pdk-dogs-and-cats
+workspace: test
+project: test
 data:
     pachyderm:
         host:
